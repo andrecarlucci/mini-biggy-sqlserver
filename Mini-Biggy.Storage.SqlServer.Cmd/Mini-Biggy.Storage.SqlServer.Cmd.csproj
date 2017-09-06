@@ -6,13 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\personal\Mini-Biggy.Storage.SqlServer\Mini-Biggy.Storage.SqlServer.csproj" />
+    <PackageReference Include="mini-biggy" Version="2.1.14" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Mini-Biggy">
-      <HintPath>..\personal\mini-biggy\Mini-Biggy\bin\Release\netstandard1.6\Mini-Biggy.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Mini-Biggy.Storage.SqlServer\Mini-Biggy.Storage.SqlServer.csproj" />
   </ItemGroup>
 
 </Project>

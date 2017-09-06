@@ -7,7 +7,7 @@ using System;
 namespace Mini_Biggy.Storage.SqlServer.Cmd {
     class Program {
         static void Main(string[] args) {
-            var conn = "Server=tcp:powerhub-sqlserver.database.windows.net,1433;Initial Catalog=powerhub-sql-prod;Persist Security Info=False;User ID=way2;Password=W2Energy#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            var conn = "Server=tcp:powerhub-sqlserver.database.windows.net,1433;Initial Catalog=powerhub-sql-prod;Persist Security Info=False;User ID=way2;Password=foo#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             //var conn = @"Server=CARLUCCI-WAY2\SQLEXPRESS;Database=mini-biggy;Trusted_Connection=True;MultipleActiveResultSets=true";
             Console.WriteLine("Hello MiniBiggy on SqlServer!");
 

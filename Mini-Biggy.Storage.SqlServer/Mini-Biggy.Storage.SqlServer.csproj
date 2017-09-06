@@ -8,9 +8,12 @@
     <Authors>Andre Carlucci</Authors>
     <Description>Mini-Biggy is a Very Fast Document/Relational Query Tool with Full LINQ Compliance. This package adds storage for SqlServer.</Description>
     <Copyright></Copyright>
-    <RepositoryType></RepositoryType>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>sqlserver biggy documentstore json linq nosql sql database filesystem vnext netstandard</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/mini-biggy/mini-biggy/master/Assets/mini_biggy.png</PackageIconUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/andrecarlucci/mini-biggy-sqlserver/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/andrecarlucci/mini-biggy-sqlserver</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/andrecarlucci/mini-biggy-sqlserver</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
