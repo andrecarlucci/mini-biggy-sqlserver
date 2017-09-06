@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <RootNamespace>MiniBiggy.Storage.SqlServer</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>mini-biggy-sqlserver</PackageId>
+    <Authors>Andre Carlucci</Authors>
+    <Description>Mini-Biggy is a Very Fast Document/Relational Query Tool with Full LINQ Compliance. This package adds storage for SqlServer.</Description>
+    <Copyright></Copyright>
+    <RepositoryType></RepositoryType>
+    <PackageTags>sqlserver biggy documentstore json linq nosql sql database filesystem vnext netstandard</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/mini-biggy/mini-biggy/master/Assets/mini_biggy.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="mini-biggy" Version="2.1.14" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.4.0" />
+  </ItemGroup>
+
+</Project>
