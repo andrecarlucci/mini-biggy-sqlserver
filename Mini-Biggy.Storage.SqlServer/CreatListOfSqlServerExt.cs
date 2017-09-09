@@ -1,50 +1,7 @@
-﻿using System.Data;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
-
-namespace MiniBiggy.Storage.SqlServer {
+﻿namespace MiniBiggy {
     public static class CreatListOfSqlServerExt {
         public static IChooseOptions<T> SavingOnSqlServer<T>(this CreateListOf<T> list) where T : new() {
             return new CreateOnSqlServerBuilder<T>();
         }
-    }
-
-    public class CreateOnSqlServerBuilder<T> : IChooseOptions<T>, 
-                                               IChooseConnectionString<T>,
-                                               IChooseKeepingLatest<T>,
-                                               IChooseTable<T> where T : new() {
-
-        private string _connectionString;
-        private int _keepingLatest = 100;
-
-        public IChooseTable<T> WithConnectionString(string connectionString) {
-            _connectionString = connectionString;
-            return this;
-        }
-        public IChooseConnectionString<T> KeepingLatest(int versionsToKeep) {
-            _keepingLatest = versionsToKeep;
-            return this;
-        }
-        public IChooseSerializer<T> SavingOnTable(string tableName) {
-            var dataStore = new SqlServerStorage(_connectionString, tableName, _keepingLatest);
-            return new CreateListOfBuilder<T>(dataStore);
-        }
-    }
-
-    public interface IChooseOptions<T> where T : new() {
-        IChooseTable<T> WithConnectionString(string connectionString);
-        IChooseConnectionString<T> KeepingLatest(int versionsToKeep = 100);
-    }
-
-    public interface IChooseConnectionString<T> where T : new() {
-        IChooseTable<T> WithConnectionString(string connectionString);
-    }
-
-    public interface IChooseTable<T> where T : new() {
-        IChooseSerializer<T> SavingOnTable(string tableName);
-    }
-
-    public interface IChooseKeepingLatest<T> where T: new() {
-        IChooseConnectionString<T> KeepingLatest(int versionsToKeep = 100);
     }
 }

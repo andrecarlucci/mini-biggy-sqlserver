@@ -14,6 +14,7 @@
     <PackageLicenseUrl>https://raw.githubusercontent.com/andrecarlucci/mini-biggy-sqlserver/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/andrecarlucci/mini-biggy-sqlserver</PackageProjectUrl>
     <RepositoryUrl>https://github.com/andrecarlucci/mini-biggy-sqlserver</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,11 +1,15 @@
 ﻿using MiniBiggy;
-using MiniBiggy.Storage.SqlServer;
 using System;
 
 namespace Mini_Biggy.Storage.SqlServer.Cmd {
     class Program {
         static void Main(string[] args) {
-            var conn = args[0];
+            var conn = args.Length > 0 ? args[0] : "";
+
+            if(conn == "") {
+                Console.WriteLine("Please, specify the connection string as the first argument");
+                return;
+            }
 
             Console.WriteLine("Hello MiniBiggy on SqlServer!");
             var list = Create.ListOf<Tweet>()
